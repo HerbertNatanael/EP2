@@ -16,3 +16,13 @@ def guardar_dado(dados_rolados, dados_no_estoque, indice):
     dado = dados_rolados.pop(indice)
     dados_no_estoque.append(dado)
     return [dados_rolados, dados_no_estoque]
+
+# remover um dado do estoque (exercicio 3)
+def remover_dado(dados_rolados, dados_no_estoque, indice):
+    dado = dados_no_estoque.pop(indice)
+    dados_rolados.append(dado)
+    return [dados_rolados, dados_no_estoque]
+
+#teste
+#from funcoes import remover_dado
+#print(remover_dado([2, 2, 2, 2], [1], 0))
