@@ -54,3 +54,21 @@ def calcula_pontos_soma(dados):
 #from funcoes import calcula_pontos_soma
 
 #print(calcula_pontos_soma([2, 3, 4, 5, 2]))
+
+#calcula_pontos_sequencia_baixa (exercicio 6)
+def calcula_pontos_sequencia_baixa(dados):
+    dados_unicos = sorted(set(dados))
+
+    for i in range(len(dados_unicos) - 3):
+        if (dados_unicos[i] + 1 == dados_unicos[i + 1] and
+            dados_unicos[i] + 2 == dados_unicos[i + 2] and
+            dados_unicos[i] + 3 == dados_unicos[i + 3]):
+            return 15
+
+    return 0
+
+# teste
+#from funcoes import calcula_pontos_sequencia_baixa
+
+#print(calcula_pontos_sequencia_baixa([5, 3, 4, 2, 2]))  # 15
+#print(calcula_pontos_sequencia_baixa([2, 3, 4, 6, 2]))  # 0
