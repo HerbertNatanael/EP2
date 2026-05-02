@@ -26,3 +26,20 @@ def remover_dado(dados_rolados, dados_no_estoque, indice):
 #teste
 #from funcoes import remover_dado
 #print(remover_dado([2, 2, 2, 2], [1], 0))
+
+# funcçãp calcula_pontos_regra_simples (exercicio 4)
+def calcula_pontos_regra_simples(dados):
+    pontuacao = {}
+
+    for valor in range(1, 7):
+        soma = 0
+        for dado in dados:
+            if dado == valor:
+                soma += dado
+        pontuacao[valor] = soma
+
+    return pontuacao
+
+# teste
+#from funcoes import calcula_pontos_regra_simples
+#print(calcula_pontos_regra_simples([2, 3, 4, 5, 2]))
