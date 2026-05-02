@@ -91,3 +91,17 @@ def calcula_pontos_sequencia_alta(dados):
 
 #print(calcula_pontos_sequencia_alta([5, 4, 1, 3, 2, 1]))  # 30
 #print(calcula_pontos_sequencia_alta([2, 3, 4, 6, 2]))    # 0
+
+# Exercício 8 - calcula_pontos_full_house
+def calcula_pontos_full_house(dados):
+    for valor in set(dados):
+        if dados.count(valor) == 3:
+            for outro in set(dados):
+                if outro != valor and dados.count(outro) == 2:
+                    
+                    soma = 0
+                    for d in dados:
+                        soma += d
+                    
+                    return soma
+    return 0
