@@ -7,8 +7,8 @@ def rolar_dados(qtd):
         dados.append(random.randint(1, 6))
     return dados
 
+# teste
 #from funcoes import rolar_dados (adicionar no arquivo final)
-
 # print(rolar_dados(5)) teste da função rolar_dados
 
 # função para guardar um dado (exercicio 2)
@@ -43,3 +43,14 @@ def calcula_pontos_regra_simples(dados):
 # teste
 #from funcoes import calcula_pontos_regra_simples
 #print(calcula_pontos_regra_simples([2, 3, 4, 5, 2]))
+
+# função calcula_pontos_soma (exercicio 5)
+def calcula_pontos_soma(dados):
+    soma = 0
+    for dado in dados:
+        soma += dado
+    return soma
+
+#from funcoes import calcula_pontos_soma
+
+#print(calcula_pontos_soma([2, 3, 4, 5, 2]))
