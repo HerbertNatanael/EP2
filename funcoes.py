@@ -67,8 +67,27 @@ def calcula_pontos_sequencia_baixa(dados):
 
     return 0
 
-# teste
+# teste/
 #from funcoes import calcula_pontos_sequencia_baixa
 
 #print(calcula_pontos_sequencia_baixa([5, 3, 4, 2, 2]))  # 15
 #print(calcula_pontos_sequencia_baixa([2, 3, 4, 6, 2]))  # 0
+
+# calcula_pontos_sequencia_alta (exercicio 7)
+def calcula_pontos_sequencia_alta(dados):
+    dados_unicos = sorted(set(dados))
+
+    for i in range(len(dados_unicos) - 4):
+        if (dados_unicos[i] + 1 == dados_unicos[i + 1] and
+            dados_unicos[i] + 2 == dados_unicos[i + 2] and
+            dados_unicos[i] + 3 == dados_unicos[i + 3] and
+            dados_unicos[i] + 4 == dados_unicos[i + 4]):
+            return 30
+
+    return 0
+
+# teste
+#from funcoes import calcula_pontos_sequencia_alta
+
+#print(calcula_pontos_sequencia_alta([5, 4, 1, 3, 2, 1]))  # 30
+#print(calcula_pontos_sequencia_alta([2, 3, 4, 6, 2]))    # 0
